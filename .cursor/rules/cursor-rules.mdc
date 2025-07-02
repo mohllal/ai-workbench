@@ -1,0 +1,114 @@
+---
+description: Guidelines for creating and maintaining Cursor rules
+globs: 
+alwaysApply: false
+---
+# Cursor Rule Guidelines
+
+This rule provides the guidelines for creating, managing, and maintaining all other Cursor rules
+
+- **Required Rule Structure:**
+  - Every cursor rule file must begin with a YAML frontmatter block followed by Markdown content
+
+- **Rule Structure Format:**
+  ```markdown
+  ---
+  description: A clear, one-line summary of what the rule enforces
+  globs: path/to/files/*.ext, other/path/**/*
+  alwaysApply: boolean
+  ---
+  # Rule Title
+
+  Start with a high-level overview of the rule's purpose and why it is important
+
+  - **Main Points in Bold**
+    - Sub-points with details
+    - Examples and explanations
+  ```
+
+- **File Organization:**
+  - All Cursor rules must be placed in the `PROJECT_ROOT/.cursor/rules/` folder
+  - Organize rules by purpose or category, use subfolder names to group related rules
+  - Place unique or general-purpose rules directly in the `PROJECT_ROOT/.cursor/rules/` folder
+  - Add rules that belong to a logical group into an appropriate existing category subfolder
+  - Create a new category subfolder only when you have several related rules that form a new group
+
+- **Directory Structure:**
+  ```plaintext
+  PROJECT_ROOT/
+  ├── .cursor/
+  │   └── rules/
+  │       ├── architecture/
+  │       │   ├── component-patterns.mdc
+  │       │   └── folder-structure.mdc
+  │       │   └── ...
+  │       ├── code-style/
+  │       │   └── typescript-style.mdc
+  │       │   └── rails-style.mdc
+  │       │   └── ...
+  │       ├── documentation/
+  │       │   └── readme-format.mdc
+  │       │   └── ...
+  │       ├── cursor-rules.mdc
+  │       └── ...
+  └── ...
+  ```
+
+- **Forbidden Locations:**
+  - Never place rule files outside the `PROJECT_ROOT/.cursor/rules/` directory
+
+- **Naming Conventions:**
+  - Use kebab-case for all folders and files names
+  - Always use the `.mdc` extension for rule files
+  - Make names descriptive of the rule's purpose
+  - Examples: `typescript-style.mdc`, `tailwind-styling.mdc`, `mdx-documentation.mdc`
+
+- **Rule Categories:**
+  - Group rules by purpose, using the list below as a starting point or creating new categories as needed
+  - Code Style: For formatting, naming, and language conventions
+  - Architecture: For high-level structure, including service design, coding patterns, data flow, and folder structures
+  - Documentation: For standards on writing MDX, READMEs, and other docs
+  - Tools: For conventions on testing, APIs, and specific libraries and tools
+  - Meta: For rules about writing and maintaining other rules
+
+- **Rule Content Guidelines:**
+  - Start with high-level overview
+  - Use bullet points for clarity
+  - Write brief, direct descriptions that get straight to the point
+  - Provide `✅ Good` and `❌ Bad` examples to prevent anti-patterns
+  - Reference actual code from the codebase where possible for examples, not theoretical ones
+  - Use consistent formatting across rules
+  - Keep rules fo DRg `mdc:` links to reference related of duplicating it
+
+- **File Ref:**
+  - Use `@filename` (@filename) to reference files
+  - Example: @rule-name.mdc for rule references
+  - Example: @run.py for code references
+
+- **Code Examples:**
+  - Use language-specific code blocks
+    ```typescript
+    // ✅ Good: A clear, descriptive example of the correct implementation
+    function goodExample(user: { id: string; name: string }) {
+    // Implementation follows the established convention
+    }
+
+    // ❌ Bad: An example of what not to do (the anti-pattern)
+    function badExample(id: string, name: string) {
+    // Implementation does not follow the established convention
+    }
+    ```
+
+- **Rule Creation Checklist:**
+  - [ ] File is placed thoughtfully in `.cursor/rules/` (either directly or in a suitable category)
+  - [ ] Directory and filename use kebab-case and the file has an `.mdc` extension
+  - [ ] YAML frontmatter (`description`, `globs`, `alwaysApply`) is complete and correct
+  - [ ] Contains a clear title and a high-level overview
+  - [ ] Provides both `✅ Good` and `❌ Bad` code examples
+  - [ ] References relevant codebase files or other rules where applicable
+
+- **Maintenance:**
+  - Keep rules up-to-date with the evolving codebase and remove outdated patterns
+  - If several general rules start to form a clear category, group them into a new subfolder
+  - Ensure all code examples reflect current codebase patterns
+  - As new rules are added, link them to other relevant rules to create a connected knowledge base
