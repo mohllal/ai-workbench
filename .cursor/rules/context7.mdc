@@ -1,0 +1,18 @@
+---
+description: Use when the user asks for documentation, setup instructions, or usage examples for any specific tool, library, framework, or API
+alwaysApply: false
+---
+# Use `context7` for Documentation and Examples
+
+This rule ensures the `context7` tool is always used to retrieve the most up-to-date version-specific documentation and code examples for our tools, preventing the use of outdated information
+
+- Trigger Condition: Use this rule whenever the user asks for documentation, setup instructions, or usage examples for **any specific tool, library, framework, or API**
+
+- Required Tool: When the trigger condition is met, you **must** use the `context7` tool to gather fresh context *before* generating a response
+
+- Example Scenario:
+  - User Asks: "Implement basic authentication with supabase"
+  - Your Action:
+    1. Recognize the request relates to a specific tool (`supabase`)
+    2. Automatically use `context7` to fetch its most up-to-date documentation
+    3. Formulate the answer based *only* on the fresh context provided by `context7`

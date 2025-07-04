@@ -1,11 +1,10 @@
 ---
-description: Use when creating and managing task lists to track project progress
-globs: 
+description: Use when the user asks for creating or updating task lists to track project progress
 alwaysApply: false
 ---
 # Task List Management
 
-Guidelines for creating and managing task lists in Markdown files to track project progress
+This rule ensures that task lists are created and updated in a consistent format and structure
 
 ## Task List Creation
 

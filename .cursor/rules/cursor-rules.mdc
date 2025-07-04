@@ -1,11 +1,10 @@
 ---
-description: Use when creating and maintaining Cursor rules
-globs: 
+description: Use when the user asks for creating or updating Cursor rules
 alwaysApply: false
 ---
 # Cursor Rules Management
 
-Guidelines for creating and maintaining Cursor rules
+This rule ensures that Cursor rules are created and updated in a consistent format and structure
 
 - Required Rule Structure:
   - Every cursor rule file must begin with a YAML frontmatter block followed by Markdown content
