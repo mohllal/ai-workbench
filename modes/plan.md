@@ -1,5 +1,5 @@
 ---
-description: Use when the user asks for a plan for a project
+description: Use when the user asks for a plan for a project from a PRD
 model: Use any thinking model you want
 inspiredBy: [https://playbooks.com/modes/plan]
 ---
