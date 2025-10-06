@@ -2,14 +2,13 @@
 description: Use when the user asks for creating or updating Cursor rules
 alwaysApply: false
 ---
-# Cursor Rules Management
 
 This rule ensures that Cursor rules are created and updated in a consistent format and structure
 
-- Required Rule Structure:
+- **Required Rule Structure:**
   - Every cursor rule file must begin with a YAML frontmatter block followed by Markdown content
 
-- Rule Structure Format:
+- **Rule Structure Format:**
 
   ```markdown
   ---
@@ -26,14 +25,14 @@ This rule ensures that Cursor rules are created and updated in a consistent form
     - Examples and explanations
   ```
 
-- File Organization:
+- **File Organization:**
   - All Cursor rules must be placed in the `PROJECT_ROOT/.cursor/rules/` folder
   - Organize rules by purpose or category, use subfolder names to group related rules
   - Place unique or general-purpose rules directly in the `PROJECT_ROOT/.cursor/rules/` folder
   - Add rules that belong to a logical group into an appropriate existing category subfolder
   - Create a new category subfolder only when you have several related rules that form a new group
 
-- Directory Structure:
+- **Directory Structure:**
 
   ```plaintext
   PROJECT_ROOT/
@@ -55,16 +54,16 @@ This rule ensures that Cursor rules are created and updated in a consistent form
   └── ...
   ```
 
-- Forbidden Locations:
+- **Forbidden Locations:**
   - Never place rule files outside the `PROJECT_ROOT/.cursor/rules/` directory
 
-- Naming Conventions:
+- **Naming Conventions:**
   - Use kebab-case for all folders and files names
   - Always use the `.mdc` extension for rule files
   - Make names descriptive of the rule's purpose
   - Examples: `typescript-style.mdc`, `tailwind-styling.mdc`, `mdx-documentation.mdc`
 
-- Rule Categories:
+- **Rule Categories:**
   - Group rules by purpose, using the list below as a starting point or creating new categories as needed
   - Code Style: For formatting, naming, and language conventions
   - Architecture: For high-level structure, including service design, coding patterns, data flow, and folder structures
@@ -72,7 +71,7 @@ This rule ensures that Cursor rules are created and updated in a consistent form
   - Tools: For conventions on testing, APIs, and specific libraries and tools
   - Meta: For rules about writing and maintaining other rules
 
-- Rule Content:
+- **Rule Content:**
   - Start with high-level overview
   - Use bullet points for clarity
   - Write brief, direct descriptions that get straight to the point
@@ -81,12 +80,12 @@ This rule ensures that Cursor rules are created and updated in a consistent form
   - Use consistent formatting across rules
   - Keep rules fo DRg `mdc:` links to reference related of duplicating it
 
-- File References:
+- **File References:**
   - Use `@filename` (@filename) to reference files
   - Example: @rule-name.mdc for rule references
   - Example: @run.py for code references
 
-- Code Examples:
+- **Code Examples:**
   - Use language-specific code blocks
   - Use `✅ Good` and `❌ Bad` examples to prevent anti-patterns
 
@@ -102,7 +101,7 @@ This rule ensures that Cursor rules are created and updated in a consistent form
     }
     ```
 
-- Rule Creation Checklist:
+- **Rule Creation Checklist:**
   - [ ] File is placed thoughtfully in `.cursor/rules/` (either directly or in a suitable category)
   - [ ] Directory and filename use kebab-case and the file has an `.mdc` extension
   - [ ] YAML frontmatter (`description`, `globs`, `alwaysApply`) is complete and correct
@@ -110,7 +109,7 @@ This rule ensures that Cursor rules are created and updated in a consistent form
   - [ ] Provides both `✅ Good` and `❌ Bad` code examples
   - [ ] References relevant codebase files or other rules where applicable
 
-- Maintenance:
+- **Maintenance:**
   - Keep rules up-to-date with the evolving codebase and remove outdated patterns
   - If several general rules start to form a clear category, group them into a new subfolder
   - Ensure all code examples reflect current codebase patterns
