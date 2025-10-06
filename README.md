@@ -4,13 +4,15 @@ This repository serves as a centralized location for defining and managing rules
 
 ## Cursor Rules
 
-| Rule File                                            | Purpose                                                 |
-| ---------------------------------------------------- | ------------------------------------------------------- |
-| [`context7.mdc`](.cursor/rules/context7.mdc)         | Use `context7` for documentation and examples.          |
-| [`cursor-rules.mdc`](.cursor/rules/cursor-rules.mdc) | Create and update Cursor rules.                         |
-| [`memory.mdc`](.cursor/rules/memory.mdc)             | Manage and utilize memory.                              |
-| [`self-improve.mdc`](.cursor/rules/self-improve.mdc) | Evolve and improve existing rules.                      |
-| [`task-list.mdc`](.cursor/rules/task-list.mdc)       | Create and manage task lists to track project progress. |
+| Rule File                                                                  | Purpose                                                              |
+|----------------------------------------------------------------------------|----------------------------------------------------------------------|
+| [`context-prime.mdc`](.cursor/rules/context-prime.mdc)                     | Prime Claude with comprehensive project understanding                |
+| [`context7.mdc`](.cursor/rules/context7.mdc)                               | Use `context7` for documentation and examples                        |
+| [`create-cursor-rules.mdc`](.cursor/rules/create-cursor-rules.mdc)         | Create and update Cursor rules                                       |
+| [`five-whys-analysis.mdc`](.cursor/rules/five-whys-analysis.mdc)           | Use "Five Whys" root cause analysis technique                        |
+| [`improve-cursor-rules.mdc`](.cursor/rules/improve-cursor-rules.mdc)       | Evolve and improve existing rules based on new patterns              |
+| [`mcp-best-practices.mdc`](.cursor/rules/mcp-best-practices.mdc)           | Develop Model Context Protocol (MCP) tools with proper configuration |
+| [`mcp-inspector-debugging.mdc`](.cursor/rules/mcp-inspector-debugging.mdc) | Debug and verify MCP servers using MCP Inspector UI with Playwright  |
 
 ## Cursor MCP Servers
 
@@ -19,11 +21,3 @@ This repository serves as a centralized location for defining and managing rules
 | `time`     | Claude time MCP server for time and timezone conversion capabilities         |
 | `memory`   | Claude memory MCP server for knowledge graph-based persistent memory system. |
 | `context7` | Context7 MCP server for version-specific documentation and examples.         |
-
-## Cursor Modes
-
-| Mode File                          | Purpose                                           |
-| ---------------------------------- | ------------------------------------------------- |
-| [`PRD.md`](modes/PRD.md)           | Product Requirements Document (PRD) for a project |
-| [`Plan.md`](modes/Plan.md)         | Plan for a project from a PRD                     |
-| [`Refactor.md`](modes/Refactor.md) | Refactor a code snippet or a feature of a project |
