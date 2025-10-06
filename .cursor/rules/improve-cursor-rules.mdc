@@ -2,7 +2,7 @@
 alwaysApply: true
 ---
 
-This rule ensures that Cursor rules are improved based on new code patterns and best practices
+This rule ensures that Cursor rules are improved based on new code patterns and best practices.
 
 - **Rule Improvement Triggers:**
   - New code patterns not covered by existing rules
